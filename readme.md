@@ -64,8 +64,6 @@
     ├── auth/
     │   └── login.py          # Authentication logic
     ├── db.py                 # SQLite database     
-    
-    #### connection and helpers
     ├── nav.py                # Navigation settings
     ├── page/
     │   ├── home.py           # Home page
@@ -74,8 +72,6 @@
     │   └── development.py    # Development page
     ├── sessions/
     │   └── state.py          # Session management 
-    
-    #### logic
     ├── requirements.txt      # Python dependencies
     ├── app.db                # SQLite database 
     └── .streamlit/           # Streamlit configuration 
