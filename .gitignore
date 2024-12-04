@@ -1,6 +1,7 @@
 # Ignorar arquivos de banco de dados
 *.db
 *.sqlite3
+*.sqbpro
 app.db
 
 # Ignorar ambientes virtuais
