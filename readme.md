@@ -59,6 +59,7 @@
 
 4. File Structure
 
+
     #### NewStreamlitApp/
     ├── app.py                # Main application file
     ├── auth/
@@ -75,8 +76,36 @@
     ├── requirements.txt      # Python dependencies
     ├── app.db                # SQLite database 
     └── .streamlit/           # Streamlit configuration 
+    └── .dockerignore         
+    └── Dockerfile            
     
+## 🐳 Docker File
 
+1. Terminal -> Go to NewStreamlitApp folder:
+   ```bash
+   docker build -t new_streamlit_app .
+
+2. Terminal -> List Docker Images:
+   ```bash
+   docker images
+
+   Result:
+
+   REPOSITORY       | TAG         |IMAGE ID       |CREATED         |SIZE
+   new_streamlit_app|   latest    |abc123456789   |2 minutes ago   |150MB
+
+3. Terminal -> Test image Docker:
+   ```bash
+   docker run -p 8501:8501 new_streamlit_app
+
+4. Terminal -> List Docker Images Running:
+   ```bash
+   docker ps
+
+5. Browser:
+   ```bash
+   http://localhost:8501  
+   
 
 ## 🛠️ Technologies Used
     - Streamlit: A powerful framework for building - interactive web applications.
@@ -95,7 +124,6 @@
 2. Commit your changes:
    ```bash
    git commit -m "Add your message here"
-
 
 3. Push your branch:
    ```bash
