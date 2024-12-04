@@ -60,26 +60,34 @@
 4. File Structure
 
 
-    #### NewStreamlitApp/
-    ├── app.py                # Main application file
-    ├── auth/
-    │   └── login.py          # Authentication logic
-    ├── db.py                 # SQLite database     
-    ├── nav.py                # Navigation settings
-    ├── page/
-    │   ├── home.py           # Home page
-    │   ├── management.py     # Management page
-    │   ├── architecture.py   # Architecture page
-    │   └── development.py    # Development page
-    ├── sessions/
-    │   └── state.py          # Session management 
-    ├── requirements.txt      # Python dependencies
-    ├── app.db                # SQLite database 
-    └── .streamlit/           # Streamlit configuration 
-    └── .dockerignore         
-    └── Dockerfile            
-    
+## Project Structure
+
+````
+NewStreamlitApp/
+
+├── app.py              # Main application file
+├── auth/               # Authentication module
+│   ├── login.py        # Handles user login logic
+├── db.py               # SQLite database configuration
+├── nav.py              # Navigation settings with exemple pages
+├── page/               # Application pages
+│   ├── home.py         # Home exemple page
+│   ├── management.py   # Management exemple page
+│   ├── architecture.py # Architecture exemple page
+│   ├── development.py  # Development exemple page
+├── sessions/           # Session management module
+│   ├── state.py        # Manages session states
+├── requirements.txt    # Python dependencies
+├── app.db              # SQLite database file
+├── .streamlit/         # Streamlit configuration files
+├── .dockerignore       # Docker ignore file
+├── Dockerfile          # Docker configuration file
+
+````
+
+
 ## 🐳 Docker File
+Build the Docker image:
 
 1. Terminal -> Go to NewStreamlitApp folder:
    ```bash
@@ -106,6 +114,7 @@
    ```bash
    http://localhost:8501  
    
+---
 
 ## 🛠️ Technologies Used
     - Streamlit: A powerful framework for building - interactive web applications.
@@ -136,3 +145,4 @@
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 Este README segue boas práticas e está pronto para ser usado no GitHub. Caso precise de personalizações ou melhorias, é só avisar! 😊
+
