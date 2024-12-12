@@ -3,7 +3,7 @@ from auth.login import logged_in, logged_out
 
 def sessions(page_name):
 
-    if not st.checkbox(":green[Hide Sessions]"):
+    if  st.checkbox(":green[View Active Sessions]"):
         st.write(f'logged_in: :blue[{st.session_state["logged_in"]}]')
 
         if "counter_global" not in st.session_state:
@@ -21,6 +21,7 @@ def sessions(page_name):
 
         if st.button("Logout"):
             logged_out()
+            # st.switch_page("page/app.py")
             st.rerun()
 
         st.write("Global:", st.session_state["counter_global"])

@@ -5,7 +5,7 @@ from sessions.state import sessions
 if "logged_in" not in st.session_state:
     logged_out()
 else:
-    page_name = "management"
-    st.title("Management Area")
-    st.write("Lorem Ipsun")
+    st.title("machinelearning page")
+    st.write("Lorem Ipsum archtecture.")
+    page_name = "machinelearning"
     sessions(page_name)

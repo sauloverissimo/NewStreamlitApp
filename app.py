@@ -1,11 +1,16 @@
+# app.py
 import streamlit as st
-from auth.login import credencials, logged_in, logged_out
-from nav import navapp
+from auth.login import logged_in, logged_out
+from navigation import get_nav
 
-# Application
 if logged_in():
-    # st.write(f'logged_in: :blue[{st.session_state["logged_in"]}]')
-    here = st.navigation(navapp, position="sidebar")
-    here.run()
+    nav = get_nav()
     
-    
+    if nav:
+        here = st.navigation(nav, position="sidebar")
+        if st.sidebar.button("Logout"):
+            logged_out()
+            st.rerun()
+        here.run()
+    else:
+        st.warning("Nenhuma navegação disponível.")
